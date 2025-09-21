@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://dk78iaeo58hl8"]
+[gd_scene load_steps=7 format=4 uid="uid://dk78iaeo58hl8"]
 
 [ext_resource type="Texture2D" uid="uid://bypbepra20g8p" path="res://assets/player.png" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://3p8vwjjoyt5a" path="res://player.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://hv2sy0yrllbi" path="res://assets/block1.png" id="2_h2yge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
@@ -18,6 +19,9 @@ sources/3 = SubResource("TileSetAtlasSource_lquwl")
 [node name="Node" type="Node"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(612, 362)
+scale = Vector2(3.4462805, 3.4462805)
+script = ExtResource("1_h2yge")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 texture_repeat = 1
@@ -33,5 +37,7 @@ texture = ExtResource("1_0xm2m")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
+position = Vector2(612, 362)
+scale = Vector2(3.4462805, 3.4462805)
 tile_map_data = PackedByteArray("AAD+/wEAAwAAAAAAAAD//wEAAwAAAAAAAAAAAAEAAwAAAAAAAAABAAEAAwAAAAAAAAACAAEAAwAAAAAAAAD8/wEAAwAAAAAAAAD9/wEAAwAAAAAAAAADAAEAAwAAAAAAAAA=")
 tile_set = SubResource("TileSet_7mycd")
