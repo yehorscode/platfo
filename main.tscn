@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=4 uid="uid://dk78iaeo58hl8"]
+
+[ext_resource type="Texture2D" uid="uid://bypbepra20g8p" path="res://assets/player.png" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://hv2sy0yrllbi" path="res://assets/block1.png" id="2_h2yge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(25, 43)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lquwl"]
+texture = ExtResource("2_h2yge")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_7mycd"]
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetAtlasSource_lquwl")
+
+[node name="Node" type="Node"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+texture_repeat = 1
+position = Vector2(-1.5, -5.5)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(-1.0000005, -12)
+scale = Vector2(0.5025, 0.5625)
+texture = ExtResource("1_0xm2m")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAD+/wEAAwAAAAAAAAD//wEAAwAAAAAAAAAAAAEAAwAAAAAAAAABAAEAAwAAAAAAAAACAAEAAwAAAAAAAAD8/wEAAwAAAAAAAAD9/wEAAwAAAAAAAAADAAEAAwAAAAAAAAA=")
+tile_set = SubResource("TileSet_7mycd")
