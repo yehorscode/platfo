@@ -1,6 +1,6 @@
 extends Node
 
-var total_coins = 0
+var total_coins:int = 0
 
 func collect_coin(val: int):
 	total_coins+=val

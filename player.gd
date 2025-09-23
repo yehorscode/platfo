@@ -22,3 +22,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 	move_and_slide()
+	
+func _process(delta: float) -> void:
+	if self.position.x >= 200:
+		self.queue_free()

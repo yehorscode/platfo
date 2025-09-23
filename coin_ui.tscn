@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://crrlkqmb3hsba"]
+
+[ext_resource type="FontFile" uid="uid://c8mrb1dlxf8ly" path="res://assets/minecraft_font.ttf" id="1_emhfd"]
+[ext_resource type="Script" uid="uid://40r2pc6tl20f" path="res://coin_ui.gd" id="1_i8ha2"]
+
+[node name="CoinUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 60.0
+script = ExtResource("1_i8ha2")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 86.95652
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("1_emhfd")
+theme_override_font_sizes/font_size = 33
+text = "Collect coins here!"
