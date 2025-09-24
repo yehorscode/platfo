@@ -22,6 +22,7 @@ scale = Vector2(36, 20.25)
 texture = ExtResource("1_unegr")
 
 [node name="Umarles" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 248.0
 offset_top = 176.0
 offset_right = 735.0
@@ -29,9 +30,10 @@ offset_bottom = 302.0
 scale = Vector2(1.4027382, 1.4400301)
 theme_override_fonts/font = ExtResource("2_vrggy")
 theme_override_font_sizes/font_size = 100
-text = "Umarles"
+text = "You Died"
 
 [node name="Label" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 488.0
 offset_top = 352.0
 offset_right = 672.0
@@ -39,11 +41,12 @@ offset_bottom = 390.0
 theme_override_colors/font_color = Color(1, 1, 1, 0.6431373)
 theme_override_fonts/font = ExtResource("2_vrggy")
 theme_override_font_sizes/font_size = 30
-text = "Gratuluje"
+text = "Congrats "
 
 [node name="Button" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 488.0
 offset_top = 408.0
 offset_right = 656.0
 offset_bottom = 440.0
-text = "Wyłącz grę"
+text = "ragequit"
