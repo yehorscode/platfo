@@ -24,5 +24,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func _process(delta: float) -> void:
-	if self.position.x >= 200:
+	if self.position.y >= 10000:
+		GameController.show_death_screen()
 		self.queue_free()
